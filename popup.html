@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>간단 메모장</title>
+      <link rel="stylesheet" href="popup.css" />
+   </head>
+   <body>
+      <div class="container">
+         <header class="header">
+            <h1>📝 간단 메모장</h1>
+            <div class="header-actions">
+               <button
+                  id="themeToggleBtn"
+                  class="btn btn-secondary"
+                  title="다크모드 전환"
+               >
+                  🌙
+               </button>
+               <button id="newNoteBtn" class="btn btn-primary">새 메모</button>
+            </div>
+         </header>
+
+         <div class="search-container">
+            <input
+               type="text"
+               id="searchInput"
+               placeholder="메모 검색..."
+               class="search-input"
+            />
+         </div>
+
+         <div class="notes-container" id="notesContainer">
+            <!-- 메모 목록이 여기에 동적으로 추가됩니다 -->
+         </div>
+
+         <div class="note-editor" id="noteEditor" style="display: none">
+            <div class="editor-header">
+               <input
+                  type="text"
+                  id="noteTitle"
+                  placeholder="제목을 입력하세요"
+                  class="title-input"
+               />
+               <div class="editor-actions">
+                  <button id="saveNoteBtn" class="btn btn-success">저장</button>
+                  <button id="cancelNoteBtn" class="btn btn-secondary">
+                     취소
+                  </button>
+               </div>
+            </div>
+            <textarea
+               id="noteContent"
+               placeholder="메모 내용을 입력하세요..."
+               class="content-textarea"
+            ></textarea>
+         </div>
+      </div>
+
+      <script src="popup.js"></script>
+   </body>
+</html>
